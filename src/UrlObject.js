@@ -1,4 +1,5 @@
 const _URL = typeof URL === 'function' ? URL : null;
+const _URLSearchParams = typeof URLSearchParams === 'function' ? URL : null;
 
 class UrlObject {
     constructor(urlString, base = '') {
