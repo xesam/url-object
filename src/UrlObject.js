@@ -1,4 +1,4 @@
-const _URL = typeof URL === 'function' ? URL : null;
+const _URL = typeof URL === 'function' ? URL : (typeof webkitURL === "function" ? webkitURL : null);
 const _URLSearchParams = typeof URLSearchParams === 'function' ? URL : null;
 
 class UrlObject {
@@ -37,22 +37,22 @@ class UrlObject {
     search(value) {
         return this._url.search;
     }
-
-    searchParams(value) {
-        return this._url.searchParams;
-    }
+    //
+    // searchParams(value) {
+    //     return this._url.searchParams;
+    // }
 
     hash(value) {
         return this._url.hash;
     }
-
-    origin(value) {
-        return this._url.origin;
-    }
-
-    href(value) {
-        return this._url.href;
-    }
+    //
+    // origin(value) {
+    //     return this._url.origin;
+    // }
+    //
+    // href(value) {
+    //     return this._url.href;
+    // }
 
 }
 
