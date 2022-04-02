@@ -1,4 +1,4 @@
-const _URL = typeof URL === 'function' ? URL : (typeof webkitURL === "function" ? webkitURL : null);
+const _URL = typeof URL === 'function' ? URL : (typeof webkitURL === "function" ? webkitURL : require('./CompatURL'));
 const _URLSearchParams = typeof URLSearchParams === 'function' ? URL : null;
 
 class UrlObject {
@@ -37,6 +37,7 @@ class UrlObject {
     search(value) {
         return this._url.search;
     }
+
     //
     // searchParams(value) {
     //     return this._url.searchParams;
@@ -45,6 +46,7 @@ class UrlObject {
     hash(value) {
         return this._url.hash;
     }
+
     //
     // origin(value) {
     //     return this._url.origin;
