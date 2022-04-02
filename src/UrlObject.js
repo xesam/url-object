@@ -38,6 +38,9 @@ class UrlObject {
         return this._url.search;
     }
 
+    update() {
+    }
+
     //
     // searchParams(value) {
     //     return this._url.searchParams;
@@ -52,10 +55,17 @@ class UrlObject {
     //     return this._url.origin;
     // }
     //
-    // href(value) {
-    //     return this._url.href;
-    // }
+    href(value) {
+        if (arguments.length === 0) {
+            return this._url.href;
+        } else {
+            this._url.href = value;
+        }
+    }
 
+    toString() {
+        return this._url.toString();
+    }
 }
 
 module.exports = UrlObject;
