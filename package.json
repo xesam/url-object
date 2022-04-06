@@ -16,11 +16,19 @@
   "dependencies": {
     "@xesam/url": "0.0.3"
   },
+  "devDependencies": {
+    "husky": "^7.0.4"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/xesam/url-object/issues"
   },
-  "homepage": "https://github.com/xesam/url-object#readme"
+  "homepage": "https://github.com/xesam/url-object#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
 }
