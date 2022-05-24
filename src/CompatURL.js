@@ -5,7 +5,6 @@ class CompatURL {
         this._href = urlString;
         this._comps = url(urlString);
     }
-
 }
 
 module.exports = CompatURL;

@@ -1,5 +1,5 @@
 const _URL = typeof URL === 'function' ? URL : (typeof webkitURL === "function" ? webkitURL : require('./CompatURL'));
-const _URLSearchParams = typeof URLSearchParams === 'function' ? URL : null;
+const _URLSearchParams = typeof URLSearchParams === 'function' ? URL : require('./CompatSearchParams');
 
 class UrlObject {
     constructor(urlString, base = '') {
@@ -38,29 +38,8 @@ class UrlObject {
         return this._url.search;
     }
 
-    update() {
-    }
-
-    //
-    // searchParams(value) {
-    //     return this._url.searchParams;
-    // }
-
     hash(value) {
         return this._url.hash;
-    }
-
-    //
-    // origin(value) {
-    //     return this._url.origin;
-    // }
-    //
-    href(value) {
-        if (arguments.length === 0) {
-            return this._url.href;
-        } else {
-            this._url.href = value;
-        }
     }
 
     toString() {
