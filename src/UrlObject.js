@@ -38,12 +38,15 @@ class UrlObject {
         return this._url.search;
     }
 
+    param() {
+    }
+
     hash(value) {
         return this._url.hash;
     }
 
-    toString() {
-        return this._url.toString();
+    toUrlString() {
+        return null;
     }
 }
 
