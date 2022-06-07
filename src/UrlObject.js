@@ -1,5 +1,5 @@
 const _URL = typeof URL === 'function' ? URL : (typeof webkitURL === "function" ? webkitURL : require('./CompatURL'));
-const _URLSearchParams = typeof URLSearchParams === 'function' ? URL : require('./CompatSearchParams');
+const _URLSearchParams = typeof URLSearchParams === 'function' ? URL : require('./CompatURLSearchParams');
 
 class UrlObject {
     constructor(urlString, base = '') {
