@@ -1,13 +1,12 @@
 {
   "name": "@xesam/url-object",
   "version": "0.0.1",
-  "description": "a javascript URL Object",
+  "description": "a javascript URL Helper",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "node test/UrlObject.test.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +16,6 @@
     "@xesam/url": "0.0.3"
   },
   "devDependencies": {
-    "husky": "^4.2.3"
   },
   "keywords": [],
   "author": "",
@@ -25,10 +23,5 @@
   "bugs": {
     "url": "https://github.com/xesam/url-object/issues"
   },
-  "homepage": "https://github.com/xesam/url-object#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
-  }
+  "homepage": "https://github.com/xesam/url-object#readme"
 }
