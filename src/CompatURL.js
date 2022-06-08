@@ -148,9 +148,8 @@ class CompatURL {
         if (valid(this.protocol)) {
             uStr += this.protocol + '//'
         }
-        const auth = this.username + ':' + this.password;
-        if (auth !== ':') {
-            uStr += auth + '@';
+        if (this._comps['auth'] !== ':') {
+            uStr += this._comps['auth'] + '@';
         }
         uStr += this.host;
         if (valid(this.pathname)) {
