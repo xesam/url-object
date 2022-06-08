@@ -44,6 +44,9 @@ class CompatURL {
 
     set host(value) {
         this._comps['host'] = value;
+        const [name, port] = value.split(':');
+        this.hostname = name;
+        this.port = port || '';
     }
 
     get hostname() {
@@ -51,9 +54,7 @@ class CompatURL {
     }
 
     set hostname(value) {
-        const [name, port] = value.split(':');
-        this.hostname = name;
-        this.port = port || '';
+        this._comps['hostname'] = value;
     }
 
     get href() {
@@ -73,11 +74,12 @@ class CompatURL {
     }
 
     get password() {
-        return this._comps['password'] || '';
+        const auth = this._comps['auth'] || '';
+        return auth.split(':')[1] || '';
     }
 
     set password(value) {
-        this._comps['password'] = value;
+        this._comps['auth'] = [this.username, value].join(':');
     }
 
     get pathname() {
@@ -133,11 +135,12 @@ class CompatURL {
     }
 
     get username() {
-        return this._comps['username'] || '';
+        const auth = this._comps['auth'] || '';
+        return auth.split(':')[0] || '';
     }
 
     set username(value) {
-        this._comps['username'] = value;
+        this._comps['auth'] = [value, this.password].join(':');
     }
 
     toString() {

@@ -60,7 +60,7 @@ class CompatURLSearchParams {
         this._params[name].push(value);
     }
 
-    delete() {
+    delete(name) {
         if (name in this._params) {
             delete this._params[name]
         }
