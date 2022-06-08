@@ -2,7 +2,7 @@ const url = require('@xesam/url');
 const _URLSearchParams = require('./CompatURLSearchParams');
 
 function valid(str) {
-    return str !== '';
+    return !!str;
 }
 
 class CompatURL {
@@ -148,7 +148,7 @@ class CompatURL {
         if (valid(this.protocol)) {
             uStr += this.protocol + '//'
         }
-        if (this._comps['auth'] !== ':') {
+        if (valid(this._comps['auth'])) {
             uStr += this._comps['auth'] + '@';
         }
         uStr += this.host;

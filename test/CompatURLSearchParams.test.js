@@ -33,4 +33,3 @@ assert.strictEqual(nsp.has('b'), false);
 
 assert.strictEqual(csp.toString(), 'a=1')
 assert.strictEqual(nsp.toString(), 'a=1')
-

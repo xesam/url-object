@@ -67,7 +67,7 @@ class CompatURLSearchParams {
     }
 
     entries() {
-        throw Error('no implement');
+        return Object.entries(this._params);
     }
 
     forEach(callback, thisArg) {
@@ -91,7 +91,7 @@ class CompatURLSearchParams {
     }
 
     keys() {
-        throw Error('no implement');
+        return Object.keys(this._params);
     }
 
     set(name, value) {
@@ -113,7 +113,7 @@ class CompatURLSearchParams {
     }
 
     values() {
-        throw Error('no implement');
+        return Object.values(this._params);
     }
 }
 
